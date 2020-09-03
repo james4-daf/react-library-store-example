@@ -8,7 +8,8 @@ function App() {
       <header className="App-header">
         <h1>React Library Store</h1>
       </header>
-      <List />
+      <List title='Books' />
+      <List title='Videos' />
       <footer>
       </footer>
     </div>

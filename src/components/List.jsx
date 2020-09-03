@@ -1,9 +1,10 @@
 import React from 'react';
 
-const List = () => {
+const List = ({ title }) => {
 	return (
 		<main>
 			<div>
+				<h3>{title}</h3>
 				<ul>
 					<li>
 						<div>
