@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Main from './components/main';
+import List from './components/List';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <h1>React Library Store</h1>
       </header>
-      <Main />
+      <List />
       <footer>
       </footer>
     </div>
