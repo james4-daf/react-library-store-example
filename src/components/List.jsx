@@ -8,6 +8,9 @@ const List = ({ title }) => {
 				<h3 className='list-title'>{title}</h3>
 				<ul>
 					<li>
+						<ListItem title='' author='Terry Pratchett' genre='Fantasy' />
+					</li>
+					<li>
 						<ListItem
 							title='The color of magic'
 							author='Terry Pratchett'

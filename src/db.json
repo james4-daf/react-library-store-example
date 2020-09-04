@@ -1,0 +1,156 @@
+{
+	"lists": [
+		{
+			"id": "f3274e5c-5b4d-4217-b15f-cb59e01e71d9",
+			"title": "Books",
+			"items": [
+				{
+					"id": "c5d5cabf-5a23-45f2-9782-30f26a949d03",
+					"title": "The Colour of Magic",
+					"author": "Terry Pratchett",
+					"genre": "Fantasy",
+					"available": true
+				},
+				{
+					"id": "2d86259e-8b3a-4b71-89b4-fa359c644930",
+					"title": "The Light Fantastic",
+					"author": "Terry Pratchett",
+					"genre": "Fantasy",
+					"available": false
+				},
+				{
+					"id": "8e1b9955-403e-4947-8d38-53729ed88874",
+					"title": "Death du Jour",
+					"author": "Kathy Reichs",
+					"genre": "Crime",
+					"available": true
+				},
+				{
+					"id": "6b456723-0662-4bf2-a478-e4ec467dc7d1",
+					"title": "The Holy Bible",
+					"author": "Various",
+					"genre": "Religion",
+					"available": true
+				},
+				{
+					"id": "e69a0d61-2064-46d2-8408-941ad384f071",
+					"title": "Hamlet",
+					"author": "William Shakespear",
+					"genre": "Classical",
+					"available": true
+				},
+				{
+					"id": "0003e6b9-429c-455a-b0bf-e964ebb77737",
+					"title": "The Bourne Identity",
+					"author": "Robert Ludlum",
+					"genre": "Action",
+					"available": false
+				},
+				{
+					"id": "06ff80f1-e37a-414b-bd66-88d59d755d7f",
+					"title": "Base Bones",
+					"author": "Kathy Reichs",
+					"genre": "Crime",
+					"available": true
+				},
+				{
+					"id": "6866f185-fef6-4954-9f14-116d129de553",
+					"title": "Along Came a Spider",
+					"author": "James Patterson",
+					"genre": "Crime",
+					"available": true
+				},
+				{
+					"id": "765086e8-399a-4bf9-8083-a8a59b9027d4",
+					"title": "The Hobbit",
+					"author": "J. R. R. Tolken",
+					"genre": "Fantasy",
+					"available": true
+				},
+				{
+					"id": "f98ac87a-12cb-4a70-9191-501667a02977",
+					"title": "Modern API Design with ASP.NET Core 2",
+					"author": "Fanie Reynders",
+					"genre": "Technology",
+					"available": true
+				}
+			]
+		},
+		{
+			"id": "a6f0d481-451f-4ea8-aded-d0c58b8ed654",
+			"title": "CDs",
+			"items": [
+				{
+					"id": "9810bbe2-c94e-43ad-a4b4-185b783fdb91",
+					"title": "Bat Out of Hell",
+					"author": "Meatloaf",
+					"genre": "Rock",
+					"available": true
+				},
+				{
+					"id": "9092f765-3566-4afc-b4bd-1dffece23ce4",
+					"title": "Just Dance",
+					"author": "Lady Gaga",
+					"genre": "Pop",
+					"available": true
+				},
+				{
+					"id": "63d4d327-7ed1-45da-887d-1c19f0092042",
+					"title": "Bad Romance",
+					"author": "Lady Gaga",
+					"genre": "Pop",
+					"available": false
+				},
+				{
+					"id": "cf03584c-064f-45c9-a6b3-a36874497a6b",
+					"title": "Teenage Dream",
+					"author": "Katy Perry",
+					"genre": "Pop",
+					"available": true
+				},
+				{
+					"id": "52838ffa-3c06-4fa3-bed4-90052c36522e",
+					"title": "The Ace of Spades",
+					"author": "Motorhead",
+					"genre": "Rock",
+					"available": true
+				},
+				{
+					"id": "7b150b95-ec9e-4a8c-939e-1efb0f987bd2",
+					"title": "Jolene",
+					"author": "Dolly Parton",
+					"genre": "Country",
+					"available": false
+				},
+				{
+					"id": "0cfa2eb2-6c93-4ded-ba92-2ae6a22c8bf1",
+					"title": "Night Fever",
+					"author": "Bee Gees",
+					"genre": "Dance",
+					"available": true
+				},
+				{
+					"id": "992e2b93-1c03-4d7d-8dc8-3907f840cef4",
+					"title": "Wihout Me",
+					"author": "Eminem",
+					"genre": "Rap",
+					"available": false
+				},
+				{
+					"id": "74ab6371-32f1-4494-a4e3-6c50fe145c05",
+					"title": "Toxicity",
+					"author": "System of a Down",
+					"genre": "Metal",
+					"available": false
+				},
+				{
+					"id": "4c32f8bc-17e9-43a2-91fb-b23c12e4eb98",
+					"title": "Say My Name",
+					"author": "Destiny's Child",
+					"genre": "R & B",
+					"available": true
+				}
+			]
+		}
+	]
+}
