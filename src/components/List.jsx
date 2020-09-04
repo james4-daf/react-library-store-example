@@ -1,38 +1,39 @@
 import React from 'react';
+import ListItem from './ListItem';
 
 const List = ({ title }) => {
 	return (
 		<main>
 			<div>
-				<h3>{title}</h3>
+				<h3 className='list-title'>{title}</h3>
 				<ul>
 					<li>
-						<div>
-							<div>The colour of magic</div>
-							<div>Terry Pratchett</div>
-							<div>Fantasy</div>
-						</div>
+						<ListItem
+							title='The color of magic'
+							author='Terry Pratchett'
+							genre='Fantasy'
+						/>
 					</li>
 					<li>
-						<div>
-							<div>The Light Fantastic</div>
-							<div>Terry Pratchett</div>
-							<div>Fantasy</div>
-						</div>
+						<ListItem
+							title='The Light Fantastic'
+							author='Terry Pratchett'
+							genre='Fantasy'
+						/>
 					</li>
 					<li>
-						<div>
-							<div>Death de Jour</div>
-							<div>Kathy Reichs</div>
-							<div>Crime</div>
-						</div>
+						<ListItem
+							title='Death de Jour'
+							author='Kathy Reichs'
+							genre='Crime'
+						/>
 					</li>
 					<li>
-						<div>
-							<div>The Holy Bible</div>
-							<div>Various</div>
-							<div>Religion</div>
-						</div>
+						<ListItem
+							title='The Holy Bible'
+							author='Various'
+							genre='Religion'
+						/>
 					</li>
 				</ul>
 			</div>
