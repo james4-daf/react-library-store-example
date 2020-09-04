@@ -1,5 +1,20 @@
 import React from 'react';
-import { isNullUndefinedOrEmpty } from '../utilities/StringUtils';
+
+export const isNullUndefinedOrEmpty = (title) => {
+	if (title === null) {
+		return true;
+	}
+
+	if (title === undefined) {
+		return true;
+	}
+
+	if (title.length === 0) {
+		return true;
+	}
+
+	return false;
+};
 
 const ListItem = (props) => {
 	const isValid = !isNullUndefinedOrEmpty(props.title);
