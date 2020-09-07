@@ -9,7 +9,7 @@ const ListItemField = ({ labelText, name, text, ...rest }) => {
 	return (
 		<div className={className} {...inputProps}>
 			<label htmlFor={name}>{labelText}</label>
-			<span name={name}>{text}</span>
+			<div name={name}>{text}</div>
 		</div>
 	);
 };
