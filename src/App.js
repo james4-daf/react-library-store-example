@@ -27,7 +27,7 @@ function App() {
             </li>
             <li>
               <div>
-                <div>Death de Jour</div>
+                <div>Death du Jour</div>
                 <div>Kathy Reichs</div>
                 <div>Crime</div>
               </div>
