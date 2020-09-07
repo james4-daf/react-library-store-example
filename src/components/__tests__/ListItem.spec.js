@@ -4,70 +4,47 @@ import ListItem from '../ListItem';
 
 describe('List item component', () => {
     it('should render list item component', () => {
-        const { getByText } = render(<ListItem title='My first book' author='The Author' genre='test genre' />);
+        render(<ListItem title='My first book' author='The Author' genre='test genre' />);
 
-        const title = getByText('My first book', { selector: 'div.list-item-title' });
-        const author = getByText('The Author', { selector: 'div.list-item-author' });
-        const genre = getByText('test genre', { selector: 'div.list-item-genre' });
-
-        expect(title).toBeInTheDocument();
-        expect(author).toBeInTheDocument();
-        expect(genre).toBeInTheDocument();
-    });
-
-    it('should render list item component field lists', () => {
-        const { getByText } = render(<ListItem title='My first book' author='The Author' genre='test genre' />);
-
-        const title = getByText('Title:', { selector: 'div.list-item-title-label' });
-        const author = getByText('Author:', { selector: 'div.list-item-author-label' });
-        const genre = getByText('Genre:', { selector: 'div.list-item-genre-label' });
-
-        expect(title).toBeInTheDocument();
-        expect(author).toBeInTheDocument();
-        expect(genre).toBeInTheDocument();
+        testFieldLabel('title', 'Title:', 'My first book');
+        testFieldLabel('author', 'Author:', 'The Author');
+        testFieldLabel('genre', 'Genre:', 'test genre');
     });
 
     it('should render blank values when inputs are not specified', () => {
         render(<ListItem title='Test' />);
 
-        const title = screen.getByText('Test', { selector: 'div.list-item-title' });
-        const author = screen.getByText('', { selector: 'div.list-item-author' });
-        const genre = screen.getByText('', { selector: 'div.list-item-genre' });
-
-        expect(title).toBeInTheDocument();
-        expect(author).toBeInTheDocument();
-        expect(genre).toBeInTheDocument();
-    });
-
-    it('should render blank values when inputs are empty', () => {
-        render(<ListItem title='Test' author='' genre='' />);
-
-        const title = screen.getByText('Test', { selector: 'div.list-item-title' });
-        const author = screen.getByText('', { selector: 'div.list-item-author' });
-        const genre = screen.getByText('', { selector: 'div.list-item-genre' });
-
-        expect(title).toBeInTheDocument();
-        expect(author).toBeInTheDocument();
-        expect(genre).toBeInTheDocument();
+        testFieldLabel('title', 'Title:', 'Test');
+        testFieldLabel('author', 'Author:', '');
+        testFieldLabel('genre', 'Genre:', '');
     });
 
     it('should render blank values when inputs are null', () => {
         render(<ListItem title='Test' author={null} genre={null} />);
 
-        const title = screen.getByText('Test', { selector: 'div.list-item-title' });
-        const author = screen.getByText('', { selector: 'div.list-item-author' });
-        const genre = screen.getByText('', { selector: 'div.list-item-genre' });
-
-        expect(title).toBeInTheDocument();
-        expect(author).toBeInTheDocument();
-        expect(genre).toBeInTheDocument();
+        testFieldLabel('title', 'Title:', 'Test');
+        testFieldLabel('author', 'Author:', '');
+        testFieldLabel('genre', 'Genre:', '');
     });
 
     it('should show error message when title is not specified', () => {
         const { getByText } = render(<ListItem />);
 
-        const title = getByText('Title not specified', { selector: 'div.list-item-error' })
+        const title = getByText('Title has not been specified', { selector: 'div.list-item-error' });
 
         expect(title).toBeInTheDocument();
     })
 })
+
+const testFieldLabel = (name, title, text) => {
+    const fieldLabel = screen.getByText(title, {
+        selector: `div.list-item-field > label[for='${name}']`
+    });
+
+    const fieldValue = screen.getByText(text, {
+        selector: `div.list-item-field > span[name='${name}']`
+    });
+
+    expect(fieldLabel).toBeInTheDocument();
+    expect(fieldValue).toBeInTheDocument();
+};

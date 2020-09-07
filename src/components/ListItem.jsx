@@ -1,4 +1,6 @@
 import React from 'react';
+import ListItemField from './ListItemField';
+import ErrorField from './ErrorField';
 import { isNullUndefinedOrEmpty } from '../utilities/StringUtils';
 
 const ListItem = (props) => {
@@ -6,22 +8,13 @@ const ListItem = (props) => {
 
 	return isValid ? (
 		<>
-			<div>
-				<div className='list-item-title-label'>Title: </div>
-				<div className='list-item-title'>{props.title}</div>
-			</div>
-			<div>
-				<div className='list-item-author-label'>Author: </div>
-				<div className='list-item-author'>{props.author}</div>
-			</div>
-			<div>
-				<div className='list-item-genre-label'>Genre: </div>
-				<div className='list-item-genre'>{props.genre}</div>
-			</div>
+			<ListItemField name='title' labelText='Title:' text={props.title} />
+			<ListItemField name='author' labelText='Author:' text={props.author} />
+			<ListItemField name='genre' labelText='Genre:' text={props.genre} />
 		</>
 	) : (
 		<>
-			<div className='list-item-error'>Title not specified</div>
+			<ErrorField message='Title has not been specified' />
 		</>
 	);
 };
