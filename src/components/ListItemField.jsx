@@ -1,4 +1,5 @@
 import React from 'react';
+import './ListItemField.css';
 
 const ListItemField = ({ labelText, name, text, ...rest }) => {
 	let { className, ...inputProps } = rest;
@@ -8,8 +9,10 @@ const ListItemField = ({ labelText, name, text, ...rest }) => {
 	//The input props are any other properties we may want to pass down such as vidibility
 	return (
 		<div className={className} {...inputProps}>
-			<label htmlFor={name}>{labelText}</label>
-			<span name={name}>{text}</span>
+			<label className='list-item-label' htmlFor={name}>
+				{labelText}
+			</label>
+			<div name={name}>{text}</div>
 		</div>
 	);
 };

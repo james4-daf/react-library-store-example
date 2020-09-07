@@ -42,7 +42,7 @@ const testFieldLabel = (name, title, text) => {
     });
 
     const fieldValue = screen.getByText(text, {
-        selector: `div.list-item-field > span[name='${name}']`
+        selector: `div.list-item-field > div[name='${name}']`
     });
 
     expect(fieldLabel).toBeInTheDocument();
