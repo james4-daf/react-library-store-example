@@ -9,7 +9,7 @@ const ListItemField = ({ labelText, name, text, ...rest }) => {
 	//The input props are any other properties we may want to pass down such as vidibility
 	return (
 		<div className={className} {...inputProps}>
-			<label className='list-item-label' htmlFor={name}>
+			<label htmlFor={name} className='list-item-label'>
 				{labelText}
 			</label>
 			<div name={name}>{text}</div>
