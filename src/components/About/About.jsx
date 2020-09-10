@@ -1,9 +1,10 @@
 import React from 'react';
+import Wording from "./Wording";
 
 const About = () => {
     return (<div>
         <h1>About!</h1>
-        <p>Just some dummy text</p>
+        <Wording />
     </div>)
 }
 
