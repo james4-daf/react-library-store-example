@@ -1,7 +1,7 @@
 import React from 'react';
 import ListItem from './ListItem';
 
-const List = ({ title }) => {
+const List = ({ title, data }) => {
 	const listStyle = {
 		listStyleType: 'none',
 		marginBottom: '10px',
@@ -11,29 +11,11 @@ const List = ({ title }) => {
 		<>
 			<h3 className='list-title'>{title}</h3>
 			<ul>
-				<li style={listStyle}>
-					<ListItem title='' author='Terry Pratchett' genre='Fantasy' />
-				</li>
-				<li style={listStyle}>
-					<ListItem
-						title='The color of magic'
-						author='Terry Pratchett'
-						genre='Fantasy'
-					/>
-				</li>
-				<li style={listStyle}>
-					<ListItem
-						title='The Light Fantastic'
-						author='Terry Pratchett'
-						genre='Fantasy'
-					/>
-				</li>
-				<li style={listStyle}>
-					<ListItem title='Death de Jour' author='Kathy Reichs' genre='Crime' />
-				</li>
-				<li style={listStyle}>
-					<ListItem title='The Holy Bible' author='Various' genre='Religion' />
-				</li>
+				{data && data.map((item, index) => (
+					<li key={item.id} style={listStyle}>
+						<ListItem title={item.title} author={item.author} genre={item.genre} />
+					</li>
+				))}
 			</ul>
 		</>
 	);

@@ -4,8 +4,11 @@ import List from './components/List';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+import BookService from "./services/BookService";
 
 function App() {
+  const bookData = BookService.getAllBooks();
+
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +18,7 @@ function App() {
         <Container fluid>
           <Row>
             <Col>
-              <List title='Books' />
+              <List title='Books' data={bookData} />
             </Col>
             <Col>
               <List title='Videos' />
