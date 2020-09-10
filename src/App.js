@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import BookService from "./services/BookService";
+import Counter from "./components/counter/Counter";
 
 function App() {
   const [bookData, setBookData] = useState([]);
@@ -24,6 +25,11 @@ function App() {
       </header>
       <main>
         <Container fluid>
+          <Row>
+            <Col>
+              <Counter />
+            </Col>
+          </Row>
           <Row>
             <Col>
               <List title='Books' data={bookData} />
