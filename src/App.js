@@ -7,7 +7,8 @@ import Container from 'react-bootstrap/Container';
 import BookService from "./services/BookService";
 
 function App() {
-  const bookData = BookService.getAllBooks();
+  const bookData = BookService.getAllBooksFromFile();
+  console.log(bookData);
 
   return (
     <div className="App">

@@ -1,3 +1,5 @@
+import fileData from "../db.json";
+
 const bookData = [
     {
         "id": "c5d5cabf-5a23-45f2-9782-30f26a949d03",
@@ -25,6 +27,9 @@ const bookData = [
 const BookService = {
     getAllBooks: () => {
         return bookData;
+    },
+    getAllBooksFromFile: () => {
+        return fileData.lists[0].items;
     }
 }
 
