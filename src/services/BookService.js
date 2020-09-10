@@ -25,6 +25,23 @@ const bookData = [
 const BookService = {
     getAllBooks: () => {
         return bookData;
+    },
+    getAllBooksFromApi: async () => {
+        return fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(json => {
+                //console.log(json);
+                var mappedBooks = [];
+                json.map((book, index) => (
+                    mappedBooks.push({
+                        "id": book.id,
+                        "title": book.username,
+                        "author": book.name,
+                        "genre": book.website
+                    })
+                ))
+                return mappedBooks;
+            })
     }
 }
 

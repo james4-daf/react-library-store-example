@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import List from './components/List';
 import Row from 'react-bootstrap/Row';
@@ -7,7 +7,15 @@ import Container from 'react-bootstrap/Container';
 import BookService from "./services/BookService";
 
 function App() {
-  const bookData = BookService.getAllBooks();
+  const [bookData, setBookData] = useState([]);
+
+  useEffect(() => {
+    BookService.getAllBooksFromApi().then(data => {
+      //console.log(data);
+      setBookData(data);
+    })
+    
+  }, []);
 
   return (
     <div className="App">
