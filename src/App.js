@@ -1,11 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import List from './components/List';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import BookService from "./services/BookService";
-import Counter from "./components/counter/Counter";
+import About from "./components/About/About";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
   const [bookData, setBookData] = useState([]);
@@ -15,7 +16,7 @@ function App() {
       //console.log(data);
       setBookData(data);
     })
-    
+
   }, []);
 
   return (
@@ -25,19 +26,19 @@ function App() {
       </header>
       <main>
         <Container fluid>
-          <Row>
-            <Col>
-              <Counter />
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <List title='Books' data={bookData} />
-            </Col>
-            <Col>
-              <List title='Videos' />
-            </Col>
-          </Row>
+          <Router>
+            <Route path="/about" exact component={About} />
+            <Route path="/" exact render={() => (
+              <Row>
+                <Col>
+                  <List title='Books' data={bookData} />
+                </Col>
+                <Col>
+                  <List title='Videos' />
+                </Col>
+              </Row>
+            )} />
+          </Router>
         </Container>
       </main>
       <footer>
