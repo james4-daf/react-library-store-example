@@ -1,1 +1,10 @@
-export const isNullUndefinedOrEmpty = (value) => !(value !== null && value !== undefined && value.length > 0);
+
+
+export const isNullUndefinedOrEmpty = (value) => {
+    var isValid = true;
+    if(typeof(value) === "undefined" || value === ""){
+        isValid = false;
+    }
+
+    return isValid;
+}

@@ -1,9 +1,6 @@
 import React from 'react';
 import './App.css';
-import List from './components/List';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
+import List from './components/list/List'
 
 function App() {
   return (
@@ -12,18 +9,11 @@ function App() {
         <h1>React Library Store</h1>
       </header>
       <main>
-        <Container fluid>
-          <Row>
-            <Col>
-              <List title='Books' />
-            </Col>
-            <Col>
-              <List title='Videos' />
-            </Col>
-          </Row>
-        </Container>
+        <List title="Books" />
+        <List title="Videos" />
       </main>
       <footer>
+
       </footer>
     </div>
   );
