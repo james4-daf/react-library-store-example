@@ -1,0 +1,10 @@
+{
+    "books": [
+        {
+            "id": 123,
+            "title": "Valid Title",
+            "author": "Jordan",
+            "genre": "testing"
+        }
+    ]
+}

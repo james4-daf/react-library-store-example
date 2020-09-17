@@ -1,29 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import List from './components/List';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
+import List from './components/list/List'
+import BookService from "./services/BookService";
 
 function App() {
+  const [bookData, setBookData] = useState([]);
+
+  useEffect(() => {
+    console.log("hook running");
+    BookService.getBooksFromApi().then(data => {
+      setBookData(data);
+    });
+  }, [])
+
+  //const bookData = BookService.getBooksFromApi();
+  const videoData = BookService.getVideos();
+
   return (
     <div className="App">
       <header className="App-header">
-        <h1>React Library Store</h1>
+        <h1 className="greenText">React Library Store</h1>
       </header>
+
       <main>
-        <Container fluid>
-          <Row>
-            <Col>
-              <List title='Books' />
-            </Col>
-            <Col>
-              <List title='Videos' />
-            </Col>
-          </Row>
-        </Container>
+        <List title="Books" data={bookData} />
+        <List title="Videos" data={videoData} />
       </main>
       <footer>
+
       </footer>
     </div>
   );
